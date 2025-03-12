@@ -1,0 +1,66 @@
+<div class="contact-container">
+  <!-- Contact Hero Section -->
+  <div class="contact-hero">
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you! Reach out to us for any inquiries or feedback.</p>
+  </div>
+
+  <!-- Contact Form Section -->
+  <div class="contact-form-section">
+    <h2>Send Us a Message</h2>
+    <form class="contact-form">
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="name" name="name" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput [(ngModel)]="email" name="email" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Message</mat-label>
+        <textarea matInput [(ngModel)]="message" name="message" required></textarea>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <!-- Contact Info Section -->
+  <div class="contact-info-section">
+    <h2>Our Office</h2>
+    <div class="contact-info-cards">
+      <mat-card class="contact-info-card">
+        <mat-card-header>
+          <mat-icon mat-card-avatar>location_on</mat-icon>
+          <mat-card-title>Address</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>City Hall, San Fernando, Pampanga</p>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="contact-info-card">
+        <mat-card-header>
+          <mat-icon mat-card-avatar>email</mat-icon>
+          <mat-card-title>Email</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>infodisiplinamuna.com</p>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="contact-info-card">
+        <mat-card-header>
+          <mat-icon mat-card-avatar>phone</mat-icon>
+          <mat-card-title>Phone</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>+63 123 456 7890</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

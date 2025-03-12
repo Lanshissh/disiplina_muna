@@ -1,0 +1,70 @@
+.about-container {
+  padding: 20px;
+}
+
+/* About Hero Section */
+.about-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5)), url('/assets/images/about-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.about-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #FFC107; /* Yellow */
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+}
+
+/* Mission Section */
+.mission-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.mission-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #007BFF; /* Blue */
+}
+
+.mission-section p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Activities Section */
+.activities-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.activities-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #DC3545; /* Red */
+}
+
+.activity-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.activity-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

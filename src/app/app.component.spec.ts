@@ -1,10 +1,22 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppComponent],
+      imports: [
+        AppComponent,
+        MatToolbarModule,
+        MatButtonModule,
+        MatIconModule,
+        RouterLink,
+        RouterLinkActive,
+        RouterOutlet,
+      ],
     }).compileComponents();
   });
 
@@ -14,16 +26,23 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'campaign-website' title`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('campaign-website');
-  });
-
-  it('should render title', () => {
+  it('should render the navbar', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, campaign-website');
+    expect(compiled.querySelector('mat-toolbar')).toBeTruthy();
+    expect(compiled.querySelector('mat-toolbar span')?.textContent).toContain('Disiplina Muna');
+  });
+
+  it('should toggle the mobile menu', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.isMenuOpen).toBeFalse();
+
+    app.toggleMenu();
+    expect(app.isMenuOpen).toBeTrue();
+
+    app.toggleMenu();
+    expect(app.isMenuOpen).toBeFalse();
   });
 });

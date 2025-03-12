@@ -1,0 +1,52 @@
+.blog-container {
+  padding: 20px;
+}
+
+/* Blog Hero Section */
+.blog-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5)), url('/assets/images/blog-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.blog-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #FFC107; /* Yellow */
+}
+
+.blog-hero p {
+  font-size: 1.2rem;
+}
+
+/* Blog Posts Section */
+.blog-posts-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.blog-posts-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #007BFF; /* Blue */
+}
+
+.blog-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.blog-post {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
