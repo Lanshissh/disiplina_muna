@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
@@ -10,6 +11,7 @@ import { CommonModule } from '@angular/common';
   imports: [
     MatToolbarModule,
     MatButtonModule,
+    MatIconModule,
     RouterLink,
     RouterLinkActive,
     RouterOutlet,
@@ -20,6 +22,11 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   isScrolled = false;
+  isMenuOpen = false;
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
