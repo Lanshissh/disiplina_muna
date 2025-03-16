@@ -16,4 +16,11 @@ export class ContactComponent {
   name = '';
   email = '';
   message = '';
+
+  onSubmit() {
+    console.log('Form submitted!');
+    console.log('Name:', this.name);
+    console.log('Email:', this.email);
+    console.log('Message:', this.message);
+  }
 }
