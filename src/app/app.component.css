@@ -30,7 +30,7 @@
 }
 
 .navbar-brand img {
-  height: 30px; /* Adjust the height to make the logo smaller */
+  height: 30px;
 }
 
 .navbar-title {
@@ -54,16 +54,16 @@
 }
 
 .nav-links a:hover {
-  background-color: rgba(255, 255, 255, 0.1); /* White with opacity */
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .nav-links a.active {
-  background-color: #DC3545; /* Red */
+  background-color: #DC3545;
   color: white;
 }
 
 .menu-button {
-  display: none; /* Hide the menu button by default */
+  display: none;
 }
 
 /* Mobile Menu Styles */
@@ -95,18 +95,16 @@
   color: #333;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
   .nav-links {
-    display: none; /* Hide the nav links on small screens */
+    display: none;
   }
 
   .menu-button {
-    display: block; /* Show the menu button on small screens */
+    display: block;
   }
 }
 
-/* Add padding to the main content to account for the fixed navbar */
 main {
-  padding-top: 80px; /* Adjust based on navbar height */
+  padding-top: 80px;
 }

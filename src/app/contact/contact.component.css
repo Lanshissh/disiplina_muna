@@ -123,7 +123,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   padding: 20px;
   text-align: center;
-  width: 300px; /* Fixed width for even spacing */
+  width: 300px;
 }
 
 /* Hover Effect */
